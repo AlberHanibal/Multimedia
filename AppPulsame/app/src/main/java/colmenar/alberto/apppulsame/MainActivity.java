@@ -2,6 +2,7 @@ package colmenar.alberto.apppulsame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
     public void botonPulsado(View v) {
         numveces++;
         Button boton = (Button)v;
-        boton.setText("Pulsado " + numveces + " veces");
+        Resources res = getResources();
+        String numPulsados = res.getQuantityString( R.plurals.numPulsaciones, numveces, numveces);
+        boton.setText(numPulsados);
         android.util.Log.d(TAG, "botonPulsado " + numveces);
     }
 }
