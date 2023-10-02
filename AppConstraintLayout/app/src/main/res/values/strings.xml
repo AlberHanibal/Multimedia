@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppConstraintLayout</string>
+    <string name="textobotonVer">mostrar</string>
+    <string name="textobotonOcultar">ocultar</string>
+</resources>
