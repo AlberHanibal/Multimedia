@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppEtiquetas</string>
+    <string name="texto1">Mi primera etiqueta</string>
+    <string name="texto2">Un texto cualquiera</string>
+    <string name="escribeAlgo">Escribe algo</string>
+</resources>
