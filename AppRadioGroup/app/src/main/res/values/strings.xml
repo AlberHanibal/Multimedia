@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AppRadioGroup</string>
+    <string name="android">Android</string>
+    <string name="ios">IOS</string>
+    <string name="windows">Windows Mobile</string>
+    <string name="simbian">Simbian</string>
+    <string name="otro">Otros</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="pregunta">¿Qué sistema operativo prefieres para tu móvil?</string>
+    <string name="respAndroid">Es una plataforma de código abierto</string>
+    <string name="respIos">Es un sistema operativo móvil de la multinacional Apple Inc</string>
+    <string name="respWindows">Es un sistema operativo móvil desarrollado por Microsoft</string>
+    <string name="respSimbian">Es un sistema operativo móvil propiedad de Nokia</string>
+    <string name="respOtros">Blackberry OS, Firefox OS</string>
+</resources>
