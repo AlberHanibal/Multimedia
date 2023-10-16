@@ -12,4 +12,10 @@
     <string name="respWindows">Es un sistema operativo móvil desarrollado por Microsoft</string>
     <string name="respSimbian">Es un sistema operativo móvil propiedad de Nokia</string>
     <string name="respOtros">Blackberry OS, Firefox OS</string>
+    <string name="camara">Cámara</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="sonido">Sonido Dolby</string>
+    <string name="textoCamara">La cámara está activada</string>
+    <string name="textoBluetooth">El Bluetooth</string>
+    <string name="textoSonido">El sonido Dolby está activado</string>
 </resources>

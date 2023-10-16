@@ -13,23 +13,23 @@
         android:text="@string/textoInicio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <Button
         android:id="@+id/botonProbar"
         android:layout_width="0dp"
         android:layout_height="58dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="108dp"
         android:backgroundTint="#9E9393"
         android:onClick="probar"
         android:text="@string/textoBoton"
         android:textColor="#171515"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cajaTexto"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/cajaTexto" />
 
     <EditText
@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="0.941" />
 
     <TextView
         android:id="@+id/textoIzq"
@@ -53,9 +53,47 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cajaTexto"
-        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cajaTexto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textoIntentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/botonProbar"
+        app:layout_constraintEnd_toStartOf="@+id/botonProbar"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/textoIzq"
+        app:layout_constraintTop_toBottomOf="@+id/textoIzq"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/botonVolverAJugar"
+        android:layout_width="151dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#9E9393"
+        android:onClick="jugar"
+        android:text="@string/botonVolverAJugar"
+        android:textColor="#171515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <TextView
+        android:id="@+id/textoVolverAJugar"
+        android:layout_width="147dp"
+        android:layout_height="62dp"
+        android:text="@string/textoAcierto"
+        app:layout_constraintBottom_toBottomOf="@+id/botonVolverAJugar"
+        app:layout_constraintEnd_toStartOf="@+id/botonVolverAJugar"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botonVolverAJugar"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
