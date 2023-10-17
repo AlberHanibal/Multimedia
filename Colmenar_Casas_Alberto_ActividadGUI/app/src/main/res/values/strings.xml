@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Colmenar_Casas_Alberto_ActividadGUI</string>
+    <string name="tituloApp">Calculadora de descuentos de billetes Renfe</string>
+    <string name="textoCoste">Coste</string>
+    <string name="textoEdad">Edad</string>
+    <string name="radioFamiliaNum">Familia numerosa</string>
+    <string name="radioFamiliaNoNum">Familia no numerosa</string>
+    <string name="textoTarjetaDorada">Tarjeta Dorada</string>
+    <string name="textoDiscapacidad">Discapacidad</string>
+    <string name="textoCalcular">Calcular</string>
+    <string name="textoLimpiar">Limpiar</string>
+    <string name="textoError"></string>
+    <string name="textoFinal"></string>
+</resources>
