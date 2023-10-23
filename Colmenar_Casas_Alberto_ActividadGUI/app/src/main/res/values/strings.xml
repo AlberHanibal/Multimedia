@@ -9,6 +9,7 @@
     <string name="textoDiscapacidad">Discapacidad</string>
     <string name="textoCalcular">Calcular</string>
     <string name="textoLimpiar">Limpiar</string>
-    <string name="textoError"></string>
-    <string name="textoFinal"></string>
+    <string name="textoErrorCoste">Introduce el coste del billete.</string>
+    <string name="textoErrorEdad">No puedes marcar Tarjeta Dorada si no tienes más de 60 años.</string>
+    <string name="textoFinal">Tu billete cuesta %.2f€, te has ahorrado %.2f€.</string>
 </resources>
