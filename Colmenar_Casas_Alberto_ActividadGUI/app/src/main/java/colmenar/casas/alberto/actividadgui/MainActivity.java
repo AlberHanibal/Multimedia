@@ -6,15 +6,16 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private double descFamiliaNum = 0.2;
-    private double descDiscapacidad = 0.3;
-    private int descTarjetaDorada = 5;
+    private final double descFamiliaNum = 0.2;
+    private final double descDiscapacidad = 0.3;
+    private final int descTarjetaDorada = 5;
     private double precioBillete;
     private int edad;
     private double precioFinal;
@@ -38,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
         textoErrores = (TextView) findViewById(R.id.textoErrores);
         textoCalculo = (TextView) findViewById(R.id.textoCalculo);
         // poner onCheckedChange en radio y check
+        // investigar
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                //calcular();
+            }
+        });
+        checkTarjeta.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+                //calcular();
+            }
+        });
+        checkDiscapacidad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+                //calcular();
+            }
+        });
     }
 
     public void calcular(View v) {
@@ -53,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
                         descuentoProvisional = descuentoProvisional + descTarjetaDorada;
                     } else {
                         textoErrores.setText(R.string.textoErrorEdad);
-                        // deseleccionar check
+                        checkTarjeta.setChecked(false);
                         // ponerlo en rojo
                     }
                 } else {
                     textoErrores.setText(R.string.textoErrorEdad);
-                    // deseleccionar check
+                    checkTarjeta.setChecked(false);
                     // ponerlo en rojo
                 }
             }
@@ -81,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
         textoCalculo.setText("");
         cajaPrecio.setText("");
         cajaEdad.setText("");
+        checkTarjeta.setChecked(false);
+        checkDiscapacidad.setChecked(false);
+        radioGroup.clearCheck();
     }
 
 }

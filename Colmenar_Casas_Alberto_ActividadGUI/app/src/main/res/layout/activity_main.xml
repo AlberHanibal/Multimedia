@@ -82,12 +82,14 @@
             android:id="@+id/radioNumerosa"
             android:layout_width="110dp"
             android:layout_height="match_parent"
+            android:onClick="calcular"
             android:text="@string/radioFamiliaNum" />
 
         <RadioButton
             android:id="@+id/radioNoNumerosa"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:onClick="calcular"
             android:text="@string/radioFamiliaNoNum" />
 
     </RadioGroup>
@@ -96,6 +98,7 @@
         android:id="@+id/checkTarjeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="calcular"
         android:text="@string/textoTarjetaDorada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkDiscapacidad"
@@ -109,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
+        android:onClick="calcular"
         android:text="@string/textoDiscapacidad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

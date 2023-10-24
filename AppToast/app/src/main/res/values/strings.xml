@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppToast</string>
+    <string name="textoBoton">Dime algo</string>
+    <string name="textoToast">Mensaje temporal</string>
+</resources>
