@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppCuadroDeDialogo</string>
+    <string name="textoBoton">Ver Mensaje</string>ç
+    <string name="titulo">MENSAJE</string>
+    <string name="textoCuadro">¿Quieres ver el mensaje?</string>
+    <string name="textoToast">Hola, hola caracola</string>
+</resources>

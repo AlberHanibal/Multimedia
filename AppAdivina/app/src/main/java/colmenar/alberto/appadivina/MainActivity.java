@@ -1,6 +1,7 @@
 package colmenar.alberto.appadivina;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Button;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AccionesDialogo {
 
     private int numeroOculto;
     private int numeroJugado;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void probar(View v) {
         String mensaje;
-        String mensajeFinal;
+        String mensajeFinal = "";
         System.out.println(numeroOculto);
         numeroJugado = Integer.parseInt(et.getText().toString());
         if (numeroJugado > numeroOculto) {
@@ -64,8 +65,9 @@ public class MainActivity extends AppCompatActivity {
             mensaje = getResources().getString(R.string.textoMayor);
             mensajeFinal = String.format(mensaje, numeroJugado);
         } else {
-            finalPartida();
-            mensajeFinal = getResources().getString(R.string.textoAcierto);
+            lanzarDialogo();
+            //finalPartida();
+            //mensajeFinal = getResources().getString(R.string.textoAcierto);
         }
         textoIzq.setText(mensajeFinal);
         et.setText("");
@@ -84,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
         textoIzq.setVisibility(View.INVISIBLE);
         textoIntentos.setVisibility(View.INVISIBLE);
     }
-    public void jugar(View v) {
+
+    public void jugar() {
         crearNumeroAleatorio();
         botonVolverAJugar.setVisibility(View.INVISIBLE);
         textoVolverAJugar.setVisibility(View.INVISIBLE);
@@ -94,5 +97,21 @@ public class MainActivity extends AppCompatActivity {
         textoIntentos.setVisibility(View.VISIBLE);
         textoIzq.setText(R.string.textoIzq);
         textoIntentos.setText("");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        jugar();
+    }
+
+    @Override
+    public void onDialogNegativeClick(DialogFragment dialog) {
+        finish();
+        //finalPartida();
+    }
+
+    public void lanzarDialogo() {
+        Dialogo dialogo = new Dialogo();
+        dialogo.show(getSupportFragmentManager(), "tagDialogo");
     }
 }

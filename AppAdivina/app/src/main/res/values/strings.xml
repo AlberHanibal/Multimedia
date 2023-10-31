@@ -11,4 +11,6 @@
         <item quantity="other">%d intentos</item>
     </plurals>
     <string name="botonVolverAJugar">Volver a jugar</string>
+    <string name="textoDialog">Otra partida</string>
+    <string name="tituloDialog">Adivina mi número</string>
 </resources>
