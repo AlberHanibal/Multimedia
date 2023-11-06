@@ -4,52 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2D881D69"
+    android:icon="@mipmap/iconorenfe"
+    android:roundIcon="@mipmap/iconorenfe_round"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tituloApp"
-        android:layout_width="0dp"
-        android:layout_height="49dp"
+        android:layout_width="205dp"
+        android:layout_height="76dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:text="@string/tituloApp"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.032" />
+
+    <Button
+        android:id="@+id/botonLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:backgroundTint="#881D69"
+        android:onClick="limpiar"
+        android:text="@string/textoLimpiar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoCalculo"
+        app:layout_constraintVertical_bias="0.268" />
 
     <TextView
-        android:id="@+id/textoCoste"
-        android:layout_width="50dp"
+        android:id="@+id/textoErrores"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textoCoste"
-        app:layout_constraintBottom_toTopOf="@+id/textoEdad"
-        app:layout_constraintEnd_toStartOf="@+id/cajaCoste"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cajaCoste"
-        app:layout_constraintVertical_bias="0.313" />
-
-    <TextView
-        android:id="@+id/textoEdad"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="@string/textoEdad"
-        app:layout_constraintBottom_toBottomOf="@+id/cajaEdad"
-        app:layout_constraintEnd_toStartOf="@+id/cajaEdad"
-        app:layout_constraintHorizontal_bias="0.609"
+        android:layout_marginBottom="152dp"
+        android:textAlignment="center"
+        android:textColor="#F65757"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textoCalculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoErrores"
+        app:layout_constraintVertical_bias="0.304" />
 
     <EditText
         android:id="@+id/cajaCoste"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="84dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,23 +77,23 @@
         android:id="@+id/cajaEdad"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="84dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cajaCoste"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintVertical_bias="0.583" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="222dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="264dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="@+id/textoEdad">
 
         <RadioButton
@@ -94,6 +112,17 @@
 
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/textoEdad"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/textoEdad"
+        app:layout_constraintBottom_toBottomOf="@+id/cajaEdad"
+        app:layout_constraintEnd_toStartOf="@+id/cajaEdad"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <CheckBox
         android:id="@+id/checkTarjeta"
         android:layout_width="wrap_content"
@@ -102,65 +131,74 @@
         android:text="@string/textoTarjetaDorada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkDiscapacidad"
-        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <CheckBox
         android:id="@+id/checkDiscapacidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="40dp"
         android:onClick="calcular"
         android:text="@string/textoDiscapacidad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <TextView
-        android:id="@+id/textoErrores"
-        android:layout_width="wrap_content"
+        android:id="@+id/textoCoste"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textoCalculo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/textoCoste"
+        app:layout_constraintBottom_toTopOf="@+id/textoEdad"
+        app:layout_constraintEnd_toStartOf="@+id/cajaCoste"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoErrores"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toTopOf="@+id/cajaCoste"
+        app:layout_constraintVertical_bias="0.366" />
 
     <Button
         android:id="@+id/botonCacular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="48dp"
+        android:backgroundTint="#871D69"
         android:onClick="calcular"
         android:text="@string/textoCalcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoCalculo"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.268" />
 
-    <Button
-        android:id="@+id/botonLimpiar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:onClick="limpiar"
-        android:text="@string/textoLimpiar"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="71dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoCalculo"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@+id/tituloApp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="514dp"
+        android:layout_marginEnd="263dp"
+        android:text="@string/nombre"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
