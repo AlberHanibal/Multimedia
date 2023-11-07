@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppEnvioDatos</string>
+    <string name="texto">¿Cómo te llamas?</string>
+    <string name="textoBoton">Saludar</string>
+    <string name="textoAlerta">La caja de texto está vacía, debes escribir tu nombre</string>
+    <string name="textoSegunda">Hola %s desde la segunda ventana</string>
+    <string name="textoBotonRespuesta">Responder</string>
+    <string name="title_activity_segunda_actividad">activity_segunda_actividad</string>
+    <string name="textoAlerta2">Antipático</string>
+</resources>
