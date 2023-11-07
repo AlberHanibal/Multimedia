@@ -38,25 +38,9 @@ public class MainActivity extends AppCompatActivity {
         checkDiscapacidad = (CheckBox) findViewById(R.id.checkDiscapacidad);
         textoErrores = (TextView) findViewById(R.id.textoErrores);
         textoCalculo = (TextView) findViewById(R.id.textoCalculo);
-        // poner onCheckedChange en radio y check
-        // investigar
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                //calcular();
-            }
-        });
-        checkTarjeta.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            public void onCheckedChanged(CompoundButton button, boolean isChecked) {
-                //calcular();
-            }
-        });
-        checkDiscapacidad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            public void onCheckedChanged(CompoundButton button, boolean isChecked) {
-                //calcular();
-            }
-        });
     }
 
+    // Método que calcula el precio del billete con todos sus descuentos
     public void calcular(View v) {
         textoErrores.setText("");
         textoCalculo.setText("");
@@ -71,12 +55,10 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         textoErrores.setText(R.string.textoErrorEdad);
                         checkTarjeta.setChecked(false);
-                        // ponerlo en rojo
                     }
                 } else {
                     textoErrores.setText(R.string.textoErrorEdad);
                     checkTarjeta.setChecked(false);
-                    // ponerlo en rojo
                 }
             }
             if (checkDiscapacidad.isChecked()) {

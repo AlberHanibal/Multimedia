@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Colmenar_Casas_Alberto_ActividadGUI</string>
+    <string name="tituloApp">Renfe ticket discount calculator</string>
+    <string name="textoCoste">Cost</string>
+    <string name="textoEdad">Age</string>
+    <string name="radioFamiliaNum">Large family</string>
+    <string name="radioFamiliaNoNum">Not large family</string>
+    <string name="textoTarjetaDorada">Gold Card</string>
+    <string name="textoDiscapacidad">Disability</string>
+    <string name="textoCalcular">Calculate</string>
+    <string name="textoLimpiar">Clean</string>
+    <string name="textoErrorCoste">Enter the cost of the ticket.</string>
+    <string name="textoErrorEdad">You cannot mark Gold Card if you are not over 60 years old.</string>
+    <string name="textoFinal">Your ticket costs %.2f€, you have saved%.2f€.</string>
+    <string name="nombre">Alberto Colmenar</string>
+</resources>
