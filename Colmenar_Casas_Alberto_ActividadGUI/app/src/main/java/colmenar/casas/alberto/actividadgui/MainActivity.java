@@ -1,15 +1,14 @@
 package colmenar.casas.alberto.actividadgui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
