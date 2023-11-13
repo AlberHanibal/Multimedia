@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppIntentImplicito</string>
+    <string name="botonBateria">Batería</string>
+    <string name="botonNavegador">Navegador</string>
+    <string name="botonSMS">SMS</string>
+    <string name="botonGaleria">Galería</string>
+    <string name="botonAudio">Audio</string>
+    <string name="botonLlamar">Llamar</string>
+</resources>
