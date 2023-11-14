@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AppSalvarInstancia</string>
+    <string name="valorInicial">0</string>
+    <string name="botonMas">+1</string>
+    <string name="botonMenos">-1</string>
+</resources>
