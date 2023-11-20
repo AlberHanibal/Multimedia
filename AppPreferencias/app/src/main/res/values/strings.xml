@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppPreferencias</string>
+    <string name="textoInicial">¿Qué melodía prefieres en tu móvil?</string>
+    <string name="radio0">Silencio</string>
+    <string name="radio1">Andrómeda</string>
+    <string name="radio2">Basic Bell</string>
+    <string name="radio3">Cassiopeia</string>
+    <string name="radio4">Chime</string>
+    <string name="botonCancelar">Cancelar</string>
+    <string name="botonAceptar">Aceptar</string>
+</resources>

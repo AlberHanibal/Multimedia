@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
     Button botonProbar = null;
     Button botonVolverAJugar = null;
     TextView textoVolverAJugar = null;
+    private static final String STATE_NUM_ELEGIDO = "numeroOculto";
+    private static final String STATE_NUM_INTENTOS= "numIntentos";
+    private static final String STATE_MENSAJE = "mensajeFinal";
+    String mensajeFinal = "";
+
 
 
     @Override
@@ -37,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
         botonVolverAJugar.setVisibility(View.INVISIBLE);
         textoVolverAJugar = (TextView) findViewById(R.id.textoVolverAJugar);
         textoVolverAJugar.setVisibility(View.INVISIBLE);
-
-        crearNumeroAleatorio();
         et.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ((event.getAction() == android.view.KeyEvent.ACTION_DOWN) && (keyCode == android.view.KeyEvent.KEYCODE_ENTER)) {
@@ -47,6 +50,23 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
                 } else return false;
             }
         });
+        if (savedInstanceState == null) {
+            // partida de 0
+            jugar();
+        } else {
+            numeroOculto = savedInstanceState.getInt(STATE_NUM_ELEGIDO);
+            numIntentos = savedInstanceState.getInt(STATE_NUM_INTENTOS);
+            if (numeroOculto == -1) {
+                // partida acabada
+                lanzarDialogo();
+            } else {
+                // partida inacabada
+                textoIzq.setText(savedInstanceState.getString(STATE_MENSAJE));
+                actualizarIntentos();
+            }
+        }
+        //crearNumeroAleatorio();
+
     }
     private void crearNumeroAleatorio() {
         numIntentos = 0;
@@ -55,8 +75,6 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
     }
     public void probar(View v) {
         String mensaje;
-        String mensajeFinal = "";
-        System.out.println(numeroOculto);
         numeroJugado = Integer.parseInt(et.getText().toString());
         if (numeroJugado > numeroOculto) {
             mensaje = getResources().getString(R.string.textoMenor);
@@ -71,10 +89,10 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
         }
         textoIzq.setText(mensajeFinal);
         et.setText("");
+        numIntentos++;
         actualizarIntentos();
     }
     private void actualizarIntentos() {
-        numIntentos++;
         String texto = getResources().getQuantityString(R.plurals.intentos, numIntentos, numIntentos);
         textoIntentos.setText(texto);
     }
@@ -111,7 +129,20 @@ public class MainActivity extends AppCompatActivity implements AccionesDialogo {
     }
 
     public void lanzarDialogo() {
+        numeroOculto = -1;
         Dialogo dialogo = new Dialogo();
         dialogo.show(getSupportFragmentManager(), "tagDialogo");
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle estado) {
+        super.onSaveInstanceState(estado);
+        estado.putInt(STATE_NUM_ELEGIDO, numeroOculto);
+        estado.putInt(STATE_NUM_INTENTOS, numIntentos);
+        if (mensajeFinal.equals("")) {
+            mensajeFinal = getResources().getString(R.string.textoIzq);
+        }
+        estado.putString(STATE_MENSAJE, mensajeFinal);
+    }
+
 }
