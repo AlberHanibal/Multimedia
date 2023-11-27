@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppLibroDeVisitas</string>
+    <string name="introduceNombre">Introduce nombre</string>
+    <string name="visitantesAnteriores"></string>
+    <string name="errorNombre">Debes introducir un nombre</string>
+    <string name="errorRegistro">Error al grabar datos</string>
+    <string name="bienvenido">Bienvenido!!</string>
+    <string name="errorVisitantes">Error al leer fichero</string>
+</resources>
