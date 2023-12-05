@@ -13,7 +13,7 @@ public class CrearBD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table if not exists Libros (codigo integer primary key not null, titulo text, autor text)");
+        db.execSQL("create table if not exists Libros (codigo integer primary key not null, titulo varchar(30), autor varchar(20))");
     }
 
     @Override
