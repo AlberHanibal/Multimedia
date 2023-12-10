@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textoArriba"
+        android:layout_width="330dp"
+        android:layout_height="84dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/textoInicio"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <EditText
+        android:id="@+id/cajaTexto"
+        android:layout_width="207dp"
+        android:layout_height="66dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/botonProbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <Button
+        android:id="@+id/botonProbar"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="188dp"
+        android:backgroundTint="@color/colorBoton"
+        android:fontFamily="monospace"
+        android:onClick="probar"
+        android:text="@string/textoBoton"
+        android:textColor="@color/colorTextoBoton"
+        android:textSize="@dimen/boton"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cajaTexto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cajaTexto" />
+
+    <TextView
+        android:id="@+id/textoIntentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/autour_one"
+        android:textSize="@dimen/normal"
+        app:layout_constraintBottom_toBottomOf="@+id/botonProbar"
+        app:layout_constraintEnd_toStartOf="@+id/botonProbar"
+        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toStartOf="@+id/textoIzq"
+        app:layout_constraintTop_toBottomOf="@+id/textoIzq"
+        app:layout_constraintVertical_bias="0.654" />
+
+    <TextView
+        android:id="@+id/textoIzq"
+        android:layout_width="114dp"
+        android:layout_height="77dp"
+        android:fontFamily="@font/autour_one"
+        android:text="@string/textoIzq"
+        android:textAlignment="center"
+        android:textSize="@dimen/normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cajaTexto"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cajaTexto"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
