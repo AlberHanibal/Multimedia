@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AdivinaMiNumeroAlbertoColmenar</string>
+    <string name="textoInicio">He pensado un número entre 1 y 100. "\n" ¿Adivina cúal es?</string>
+    <string name="textoMayor">¿%d? ¡Uy! El número que he pensado es mayor</string>
+    <string name="textoMenor">¿%d? ¡Uy! El número que he pensado es menor</string>
+    <string name="textoAcierto">¡¡Has acertado!! "\n" ¿Quieres volver a jugar?</string>
+    <string name="textoIzq">¡¡Inténtalo!!</string>
+    <string name="textoBoton">Probar</string>
+    <plurals name="intentos">
+        <item quantity="one">%d intento</item>
+        <item quantity="other">%d intentos</item>
+    </plurals>
+    <string name="botonVolverAJugar">Volver a jugar</string>
+    <string name="textoDialog">Otra partida</string>
+    <string name="tituloDialog">Adivina mi número</string>
+    <string name="error1">Introduce un número entre el 0 y el 100</string>
+    <string name="error2">Introduce un número</string>
+
+    <string name="tituloPortada">Adivina mi número</string>
+    <string name="preguntaNombre">¿Cómo te llamas?</string>
+    <string name="botonVolver">Volver</string>
+    <string name="botonPuntuaciones">Puntuaciones</string>
+    <string name="errorNombre">Tienes que introducir tu nombre</string>
+    <string name="botonJugar">Jugar</string>
+
+    <string name="puntuaciones">Puntuaciones</string>
+
+    <string name="ficheroTexto"> Intentos: </string>
+</resources>
