@@ -3,6 +3,7 @@ package colmenar.casas.alberto.appbdlibros;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -77,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
         }
         limpiarCajas();
         bd.close();
+    }
+
+    public void consultarLibros(View v) {
+        Intent i = new Intent(this, VerLibros.class);
+        startActivity(i);
     }
 
     public void verMensajeToast(String mensaje) {
