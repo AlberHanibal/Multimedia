@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AppSimpson</string>
+
+    <string-array name="titulo">
+        <item name="Hommer">Hommer</item>
+        <item name="Marge">Marge</item>
+        <item name="Bart">Bart</item>
+        <item name="Lisa">Lisa</item>
+        <item name="Maggie">Maggie</item>
+    </string-array>
+
+    <string-array name="descripcion">
+        <item name="deschommer">Desempeña el papel de padre, esposo, inspector de seguridad...</item>
+        <item name="descmarge">Es una feliz ama de casa, madre de tres hijos.</item>
+        <item name="descbart">Erróneamente catalogado como un alumno de bajo rendimiento...</item>
+        <item name="desclisa">Está ansiosa por asistir a la Universidad.</item>
+        <item name="descmaggie">En su primer añi de vida su desarrollo ha sido asombroso</item>
+    </string-array>
+</resources>
