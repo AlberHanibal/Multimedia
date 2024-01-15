@@ -23,5 +23,6 @@ public class MainActivity extends AppCompatActivity {
         videoView.setMediaController(new MediaController(this));
         videoView.start();
         videoView.requestFocus();
+
     }
 }
