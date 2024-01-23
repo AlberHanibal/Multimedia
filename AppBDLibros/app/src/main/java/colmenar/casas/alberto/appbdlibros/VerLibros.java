@@ -22,28 +22,10 @@ public class VerLibros extends AppCompatActivity {
         setContentView(R.layout.activity_ver_libros);
         listaLibros = (ListView) findViewById(R.id.listaLibros);
         crearBD = new CrearBD(this);
-        //consultarLibros();
-        consultarLibros2();
+        consultarLibros();
     }
 
     public void consultarLibros() {
-        List<String> items = new ArrayList<String>();
-        SQLiteDatabase bd = crearBD.getReadableDatabase();
-        Cursor contenido = bd.rawQuery("select * from libros", null);
-        int i=0;
-        String cad="";
-        while (contenido.moveToNext() && i<contenido.getCount()) {
-            cad=""+contenido.getString(0)+"  "+contenido.getString(1)+"  " + contenido.getString(2) + "\n";
-            items.add(cad);
-            i++;
-        }
-        ArrayAdapter <String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
-        listaLibros.setAdapter(adapter);
-        contenido.close();
-        bd.close();
-    }
-
-    public void consultarLibros2() {
         List <Libro> items = new ArrayList <Libro>();
         SQLiteDatabase bd = crearBD.getReadableDatabase();
         Cursor contenido = bd.rawQuery("select * from libros", null);

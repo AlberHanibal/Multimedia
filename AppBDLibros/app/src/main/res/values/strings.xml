@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">AppBDLibros</string>
+    <string name="titulo">Título provisional</string>
+    <string name="pulsePortada">Pulse en pantalla para entrar a la biblioteca</string>
+
+
     <string name="botonConsultar">Consultar</string>
     <string name="botonInsertar">Insertar</string>
     <string name="botonBorrar">Borrar</string>
@@ -7,4 +11,6 @@
     <string name="textoCodigo">Código</string>
     <string name="textoTitulo">Título</string>
     <string name="textoAutor">Autor</string>
+
+
 </resources>
