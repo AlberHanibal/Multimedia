@@ -17,7 +17,7 @@ public class Portada extends AppCompatActivity {
     // añadir a la BD imagen en URL, modificar la clase libro para imagen, sinopsis, etc
     // lista de libros como https://www.google.com/search?q=interfaz+biblioteca&tbm=isch&ved=2ahUKEwjW1Zi8pvODAxUbfqQEHbHpADkQ2-cCegQIABAA&oq=interfaz+biblioteca&gs_lcp=CgNpbWcQAzoFCAAQgAQ6CggAEIAEEIoFEEM6BggAEAgQHjoGCAAQBxAeUKUPWJgbYPIbaABwAHgAgAFyiAGEB5IBAzUuNJgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=wJSvZdb1HZv8kdUPsdODyAM&bih=739&biw=1600&rlz=1C1GCEU_esES1075ES1075#imgrc=hcqlJ5WK5cxRqM
         // con info (?) o al click de la imagen nueva información
-    //
+    // hacer una clase para las operaciones de la bd
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

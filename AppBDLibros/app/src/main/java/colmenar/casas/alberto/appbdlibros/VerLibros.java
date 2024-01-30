@@ -36,7 +36,7 @@ public class VerLibros extends AppCompatActivity {
             items.add(libro);
             i++;
         }
-        ArrayAdapter <Libro> adapter=new ArrayAdapter<Libro>(this, android.R.layout.simple_list_item_1, items);
+        MyArrayAdapter adapter = new MyArrayAdapter(this, items);
         listaLibros.setAdapter(adapter);
         contenido.close();
         bd.close();
