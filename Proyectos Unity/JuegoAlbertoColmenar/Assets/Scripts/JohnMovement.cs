@@ -12,6 +12,8 @@ public class JohnMovement : MonoBehaviour
     private float Horizontal;
     private bool Grounded;
     private Animator Animator;
+    private float LastShoot;
+    private int Health = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +47,10 @@ public class JohnMovement : MonoBehaviour
             Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > LastShoot + 0.25f)
         {
             Shoot();
+            LastShoot = Time.time;
         }
     }
 
@@ -58,11 +61,21 @@ public class JohnMovement : MonoBehaviour
 
     private void Shoot()
     {
-
+        Vector3 direction;
+        if (transform.localScale.x == 1.0f) direction = Vector2.right;
+        else direction = Vector2.left;
+        GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        bullet.GetComponent<BulletScript>().setDirection(direction);
     }
 
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
+    }
+
+    public void Hit()
+    {
+        Health = Health - 1;
+        if (Health == 0) Destroy(gameObject);
     }
 }
