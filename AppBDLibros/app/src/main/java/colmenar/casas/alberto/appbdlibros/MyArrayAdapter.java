@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,19 +30,13 @@ public class MyArrayAdapter extends ArrayAdapter<Libro> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Libro l = getItem(position);
         View v = LayoutInflater.from(getContext()).inflate(R.layout.libro_lista, parent, false);
-        TextView tv;
-        tv = v.findViewById(R.id.textoCarta);
-        String carta = String.format("%s%n%s, %s%n", l.getCodigo(), l.getAutor(), l.getTitulo());
+        TextView tv = v.findViewById(R.id.textoCarta);
+        String carta = String.format("Código: %s%n" +
+                                    "Autor: %s%n" +
+                                    "Título: %s%n", l.getCodigo(), l.getAutor(), l.getTitulo());
         tv.setText(carta);
-        // añadir la foto del libro cogiendolo de la bd
-        /*
-        tv = v.findViewById(R.id.codigo);
-        tv.setText(l.getCodigo());
-        tv = v.findViewById(R.id.autor);
-        tv.setText(l.getAutor());
-        tv = v.findViewById(R.id.titulo);
-        tv.setText(l.getTitulo());
-        */
+        tv = v.findViewById(R.id.cartaCodigo);
+        tv.setText(String.format("%s", l.getCodigo()));
         return v;
     }
 }
