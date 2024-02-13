@@ -19,6 +19,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".InfoLibro"
+            android:exported="false" />
+        <activity
             android:name=".Portada"
             android:exported="true">
             <intent-filter>

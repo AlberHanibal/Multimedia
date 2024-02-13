@@ -12,5 +12,7 @@
     <string name="textoTitulo">Título</string>
     <string name="textoAutor">Autor</string>
 
+    <string name="botonAtras">Atrás</string>
+
 
 </resources>

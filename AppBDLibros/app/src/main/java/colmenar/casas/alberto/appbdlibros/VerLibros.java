@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -28,15 +29,6 @@ public class VerLibros extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_libros);
         listaLibros = (ListView) findViewById(R.id.listaLibros);
-        listaLibros.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //System.out.println(listaLibros.getPositionForView(view));
-            }
-        });
-
-
-
         crearBD = new CrearBD(this);
         consultarLibros();
     }
@@ -60,22 +52,16 @@ public class VerLibros extends AppCompatActivity {
 
     public void onClickLibro(View view) {
         RelativeLayout rl = (RelativeLayout) listaLibros.getChildAt(listaLibros.getPositionForView(view));
-        rl.getChildAt(0);
-        // esto coge el card, falta el codigo
-        System.out.println(listaLibros.getPositionForView(view));
-        System.out.println();
-        /*
-        TextView tv = findViewById(R.id.cartaCodigo);
-        System.out.println(tv.getText());
-        */
+        CardView cv = (CardView) rl.getChildAt(0);
+        TextView tv = (TextView) cv.getChildAt(0);
+        Intent i = new Intent(this, InfoLibro.class);
+        i.putExtra("libro", Integer.parseInt(tv.getText().toString()));
+        startActivity(i);
+    }
 
-        /*
-        CardView cv = findViewById(view.getId());
-        Context contexto = getApplicationContext();
-        int duracion = Toast.LENGTH_LONG; // Toast.LENGTH_LONG
-        Toast toast = Toast.makeText(contexto, cv.getChildAt(0).toString(), duracion);
-        toast.show();
-*/
+    public void clickAtras(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 }
