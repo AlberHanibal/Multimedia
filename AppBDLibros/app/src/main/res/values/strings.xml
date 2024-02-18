@@ -8,11 +8,16 @@
     <string name="botonInsertar">Insertar</string>
     <string name="botonBorrar">Borrar</string>
     <string name="botonListado">Listado</string>
+    <string name="botonCancelar">Cancelar</string>
+    <string name="botonGuardar">Guardar</string>
+
     <string name="textoCodigo">Código</string>
     <string name="textoTitulo">Título</string>
     <string name="textoAutor">Autor</string>
+    <string name="textoSinopsis">Sinopsis</string>
 
     <string name="botonAtras">Atrás</string>
+    <string name="botonModificar">Modificar</string>
 
 
 </resources>

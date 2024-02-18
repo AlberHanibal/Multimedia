@@ -41,43 +41,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void insertarLibro(View v) {
-        SQLiteDatabase bd = crearBD.getWritableDatabase();
-        if (cajaCodigo.getText().toString().equals("") || cajaTitulo.getText().toString().equals("")
-            || cajaAutor.getText().toString().equals("")) {
-            verMensajeToast("Cajas vacías, debes introducir los datos");
-        } else {
-            String codigo = cajaCodigo.getText().toString();
-            String titulo = cajaTitulo.getText().toString();
-            String autor = cajaAutor.getText().toString();
-            try {
-                bd.execSQL("INSERT INTO Libros VALUES (?, ?, ?)", new Object[] {codigo, titulo, autor});
-                verMensajeToast("Libro insertado");
-            } catch (Exception sqlex) {
-                verMensajeToast(sqlex.getMessage());
-            }
-        }
-        limpiarCajas();
-        bd.close();
-    }
-
-    public void borrarLibro(View v) {
-        String codigo = cajaCodigo.getText().toString();
-        String titulo = cajaTitulo.getText().toString();
-        SQLiteDatabase bd = crearBD.getWritableDatabase();
-        if (codigo.equals("") && titulo.equals("")) {
-            verMensajeToast("Código y título vacío, debes introducir al menos uno");
-        } else if (!codigo.equals("") && !titulo.equals("")) {
-            bd.execSQL("DELETE FROM Libros WHERE codigo = ? AND titulo = ?", new Object[]{codigo, titulo});
-            verMensajeToast("Borrado completado");
-        } else if (!codigo.equals("")) {
-            bd.execSQL("DELETE FROM Libros WHERE codigo = ?", new Object[]{codigo});
-            verMensajeToast("Borrado completado");
-        } else if (!titulo.equals("")) {
-            bd.execSQL("DELETE FROM Libros WHERE titulo = ?", new Object[]{titulo});
-            verMensajeToast("Borrado completado");
-        }
-        limpiarCajas();
-        bd.close();
+        Intent i = new Intent(this, FormularioLibro.class);
+        startActivity(i);
     }
 
     public void consultarLibros(View v) {

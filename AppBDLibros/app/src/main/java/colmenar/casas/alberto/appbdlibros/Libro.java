@@ -5,6 +5,7 @@ public class Libro {
     private int codigo;
     private String titulo;
     private String autor;
+    private String sinopsis;
 
     public Libro(int codigo, String titulo, String autor) {
         this.codigo = codigo;
@@ -34,6 +35,14 @@ public class Libro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getSinopsis() {
+        return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
     }
 
     @Override

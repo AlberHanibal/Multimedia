@@ -1,0 +1,14 @@
+logo, icono
+añadir sonido ambiente de biblioteca con botón de stop y play que cambie la imagen
+    ver video de una biblioteca (?)
+MainActivity
+    consulta si existe el libro
+
+estilo
+    rectangulo superior de color primario
+    botones de color secundario
+    cuadrados
+
+    elegir 2 fonts: para info de libros e interfaz
+
+    fondo pastel

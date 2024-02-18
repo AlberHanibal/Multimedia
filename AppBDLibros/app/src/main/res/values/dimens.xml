@@ -2,4 +2,5 @@
 <resources>
     <dimen name="ancho">150dp</dimen>
     <dimen name="alto">100dp</dimen>
+    <dimen name = "textoMedio">20dp</dimen>
 </resources>
