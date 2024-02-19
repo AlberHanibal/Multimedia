@@ -92,7 +92,7 @@ public class FormularioLibro extends AppCompatActivity {
                 bd.execSQL("INSERT INTO Libros VALUES (?, ?, ?, ?)", new Object[] {codigo, titulo, autor, sinopsis});
                 verMensajeToast("Libro insertado");
             } catch (Exception sqlex) {
-                verMensajeToast(sqlex.getMessage());
+                verMensajeToast("Ese codigo ya existe, inserte otro nuevo.");
                 return false;
             }
         }
@@ -114,7 +114,7 @@ public class FormularioLibro extends AppCompatActivity {
                 bd.execSQL("UPDATE Libros SET titulo = ?, autor = ?, sinopsis = ? WHERE codigo = ?", new Object[] {titulo, autor, sinopsis, codigo});
                 verMensajeToast("Libro modificado");
             } catch (Exception sqlex) {
-                verMensajeToast(sqlex.getMessage());
+                verMensajeToast("Error al modificar el libro");
                 return false;
             }
         }

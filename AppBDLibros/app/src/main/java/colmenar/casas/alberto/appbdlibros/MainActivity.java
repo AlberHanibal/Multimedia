@@ -50,17 +50,4 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, VerLibros.class);
         startActivity(i);
     }
-
-    public void verMensajeToast(String mensaje) {
-        Context contexto = getApplicationContext();
-        int duracion = Toast.LENGTH_LONG;
-        Toast toast = Toast.makeText(contexto, mensaje, duracion);
-        toast.show();
-    }
-
-    public void limpiarCajas() {
-        cajaCodigo.setText("");
-        cajaTitulo.setText("");
-        cajaAutor.setText("");
-    }
 }
