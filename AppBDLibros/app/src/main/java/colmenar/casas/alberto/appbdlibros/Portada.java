@@ -42,6 +42,11 @@ public class Portada extends AppCompatActivity {
     }
 
     public void clickMusica(View v) {
+        // enchufarla de base, si se pulsa se apaga y se cambia la imagen del botón
+
+    }
+
+    public void clickVideo(View v) {
 
     }
 }

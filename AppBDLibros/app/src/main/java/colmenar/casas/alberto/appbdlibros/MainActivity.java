@@ -9,22 +9,23 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     CrearBD crearBD;
     EditText cajaCodigo;
-    EditText cajaTitulo;
-    EditText cajaAutor;
+    TextView cajaTitulo;
+    TextView cajaAutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cajaCodigo = (EditText) findViewById(R.id.cajaCodigo);
-        cajaTitulo = (EditText) findViewById(R.id.cajaTitulo);
-        cajaAutor = (EditText) findViewById(R.id.cajaAutor);
+        cajaTitulo = findViewById(R.id.cajaTitulo);
+        cajaAutor = findViewById(R.id.cajaAutor);
         crearBD = new CrearBD(this);
     }
 

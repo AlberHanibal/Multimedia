@@ -102,6 +102,7 @@
         android:backgroundTint="@color/primario"
         android:onClick="clickCancelar"
         android:text="@string/botonCancelar"
+        android:textSize="@dimen/textoMedio"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,6 +118,7 @@
         android:backgroundTint="@color/primario"
         android:onClick="clickGuardar"
         android:text="@string/botonGuardar"
+        android:textSize="@dimen/textoMedio"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,5 +139,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.223" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/primario"
+        android:fontFamily="@font/aclonica"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:text="@string/titulo"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/blanco"
+        android:textSize="@dimen/textoMedio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

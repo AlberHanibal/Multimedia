@@ -64,20 +64,25 @@ public class FormularioLibro extends AppCompatActivity {
     }
 
     public void clickGuardar(View view) {
+        boolean operacionCompleta;
         if (codigo == 0) {
-            insertarLibro();
+            operacionCompleta = insertarLibro();
         } else {
-            modificarLibro();
+            operacionCompleta = modificarLibro();
         }
-        Intent i = new Intent(this, VerLibros.class);
-        startActivity(i);
+        if (operacionCompleta) {
+            Intent i = new Intent(this, VerLibros.class);
+            startActivity(i);
+        }
+
     }
 
-    private void insertarLibro() {
+    private boolean insertarLibro() {
         SQLiteDatabase bd = crearBD.getWritableDatabase();
         if (cajaCodigo2.getText().toString().equals("") || cajaTitulo2.getText().toString().equals("")
                 || cajaAutor2.getText().toString().equals("") || cajaSinopsis.getText().toString().equals("")) {
             verMensajeToast("Cajas vacías, debes introducir los datos");
+            return false;
         } else {
             String codigo = cajaCodigo2.getText().toString();
             String titulo = cajaTitulo2.getText().toString();
@@ -88,16 +93,19 @@ public class FormularioLibro extends AppCompatActivity {
                 verMensajeToast("Libro insertado");
             } catch (Exception sqlex) {
                 verMensajeToast(sqlex.getMessage());
+                return false;
             }
         }
         bd.close();
+        return true;
     }
 
-    private void modificarLibro() {
+    private boolean modificarLibro() {
         SQLiteDatabase bd = crearBD.getWritableDatabase();
         if (cajaTitulo2.getText().toString().equals("")
                 || cajaAutor2.getText().toString().equals("") || cajaSinopsis.getText().toString().equals("")) {
             verMensajeToast("Cajas vacías, debes introducir los datos");
+            return false;
         } else {
             String titulo = cajaTitulo2.getText().toString();
             String autor = cajaAutor2.getText().toString();
@@ -107,9 +115,11 @@ public class FormularioLibro extends AppCompatActivity {
                 verMensajeToast("Libro modificado");
             } catch (Exception sqlex) {
                 verMensajeToast(sqlex.getMessage());
+                return false;
             }
         }
         bd.close();
+        return true;
     }
 
     public void verMensajeToast(String mensaje) {

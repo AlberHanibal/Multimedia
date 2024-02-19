@@ -2,5 +2,6 @@
 <resources>
     <color name="primario">#d47400</color>
     <color name="secundario">#c9d400</color>
-    <color name="fondo">#f2e99a</color>
+    <color name="fondo">#90F2E99A</color>
+    <color name="blanco">#ffffff</color>
 </resources>

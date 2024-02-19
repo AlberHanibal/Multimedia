@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">AppBDLibros</string>
-    <string name="titulo">Título provisional</string>
+    <string name="titulo">Biblioteca de Alejandría</string>
+    <string name="autor">Alberto Colmenar</string>
     <string name="pulsePortada">Pulse en pantalla para entrar a la biblioteca</string>
 
-
     <string name="botonConsultar">Consultar</string>
-    <string name="botonInsertar">Insertar</string>
+    <string name="botonInsertar">Añadir Libro</string>
     <string name="botonBorrar">Borrar</string>
     <string name="botonListado">Listado</string>
     <string name="botonCancelar">Cancelar</string>

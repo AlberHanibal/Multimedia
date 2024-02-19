@@ -2,5 +2,6 @@
 <resources>
     <dimen name="ancho">150dp</dimen>
     <dimen name="alto">100dp</dimen>
-    <dimen name = "textoMedio">20dp</dimen>
+    <dimen name = "textoMedio">20sp</dimen>
+    <dimen name = "textoAMano">26sp</dimen>
 </resources>
