@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/JuegoAlbertoColmenar
+C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/SpaceAlbertoColmenar
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63433
-Successfully changed project path to: C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/JuegoAlbertoColmenar
-C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/JuegoAlbertoColmenar
+51517
+Successfully changed project path to: C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/SpaceAlbertoColmenar
+C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/SpaceAlbertoColmenar
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +47,15 @@ C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/Juego
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5580] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3587331458 [EditorId] 3587331458 [Version] 1048832 [Id] WindowsEditor(7,C13-PC16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [6120] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 229215110 [EditorId] 229215110 [Version] 1048832 [Id] WindowsEditor(7,C13-PC16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5580] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3587331458 [EditorId] 3587331458 [Version] 1048832 [Id] WindowsEditor(7,C13-PC16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [6120] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 229215110 [EditorId] 229215110 [Version] 1048832 [Id] WindowsEditor(7,C13-PC16) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 113.89 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 110.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.15f1 (e8e88683f834)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/JuegoAlbertoColmenar/Assets
+[Subsystems] Discovering subsystems at path C:/Users/DAM2A-03/Documents/Multimedia/ProyectosMultimedia/Proyectos Unity/SpaceAlbertoColmenar/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -67,42 +67,42 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.152544 seconds.
+Registered in 0.149872 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 114.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.38 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.254 seconds
+- Completed reload, in  7.798 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2254ms)
-		BeginReloadAssembly (349ms)
+	ReloadAssembly (7799ms)
+		BeginReloadAssembly (6052ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1259ms)
-			LoadAssemblies (348ms)
+		EndReloadAssembly (1169ms)
+			LoadAssemblies (6050ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (766ms)
+			SetupTypeCache (706ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (383ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (359ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (115ms)
+				RefreshPlugins (108ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (185ms)
-				ProcessInitializeOnLoadMethodAttributes (71ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010786 seconds.
+Registered in 0.009180 seconds.
