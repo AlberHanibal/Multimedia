@@ -15,7 +15,8 @@ public class PlayerShooting : MonoBehaviour
         {
             cooldownTimer = fireDelay;
 
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Instantiate(bulletPrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);
+            Instantiate(bulletPrefab, transform.GetChild(1).position, transform.GetChild(1).rotation);
         }
     }
     
