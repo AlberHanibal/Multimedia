@@ -1,0 +1,12 @@
+animación de destruir.
+cambiar el asset del disparo enemigo.
+spawn player.
+spawn enemigo.
+cambiar el disparo para que dispare al entrar en cámara y no dispare al estar en la espalda.
+vidas.
+puntuación o cantidad de muertes.
+modificación por tiempo de la dificultad.
+ajustar tiempo, velocidad, disparo.
+mostrar invulnerabilidad.
+música.
+sonidos de disparo y destrucción.
