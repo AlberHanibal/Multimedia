@@ -10,23 +10,6 @@ public class MoveForward : MonoBehaviour
     
     void Update()
     {
-        /*
-        Vector2 pos = transform.position;
-        // para ir para abajo
-        if (direction == "bottom")
-        {
-            pos = new Vector2(pos.x, pos.y - speed * Time.deltaTime);
-        } else if (direction == "top")
-        {
-            pos = new Vector2(pos.x, pos.y + speed * Time.deltaTime);
-        }
-
-        //pos.y += pos.y * speed * Time.deltaTime;
-
-        //para ir para arriba
-        
-        transform.position = pos;
-        */
         Vector3 pos = transform.position;
         if (direction == "bottom")
         {

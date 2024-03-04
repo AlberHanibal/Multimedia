@@ -13,6 +13,7 @@ public class PlayerShooting : MonoBehaviour
         cooldownTimer -= Time.deltaTime;
         if (Input.GetButton("Fire1") && cooldownTimer <= 0)
         {
+            GetComponent<AudioSource>().Play();
             cooldownTimer = fireDelay;
 
             Instantiate(bulletPrefab, transform.GetChild(0).position, transform.GetChild(0).rotation);

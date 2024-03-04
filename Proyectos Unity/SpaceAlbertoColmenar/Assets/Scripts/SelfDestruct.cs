@@ -9,10 +9,15 @@ public class SelfDestruct : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        
-        if (timer <= 0)
+        Vector2 maxBot = Camera.main.ViewportToWorldPoint(new Vector2(0, -2.2f));
+        if (timer <= 0 || transform.position.y == maxBot.y)
         {
             Destroy(gameObject);
         }
+    }
+
+    void DestroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }

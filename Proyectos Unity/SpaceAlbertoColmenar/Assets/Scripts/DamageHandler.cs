@@ -6,6 +6,8 @@ public class DamageHandler : MonoBehaviour
 {
     public int health = 1;
     public float invulnPeriod = 0;
+    public GameObject explosionGO;
+    public bool explotable = false;
 
     float invulnTimer = 0;
     int correctLayer;
@@ -38,6 +40,11 @@ public class DamageHandler : MonoBehaviour
 
     void Die()
     {
+        if (explotable)
+        {
+            GameObject explosion = (GameObject)Instantiate(explosionGO);
+            explosion.transform.position = transform.position;
+        }
         Destroy(gameObject);
     }
 }

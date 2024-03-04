@@ -150,6 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnPeriod: 0
+  explosionGO: {fileID: 0}
+  explotable: 0
 --- !u!114 &8651313304624604591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,4 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe8f50b1663fb247ac18e20da19976d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 3

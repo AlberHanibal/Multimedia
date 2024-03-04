@@ -147,6 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   invulnPeriod: 0
+  explosionGO: {fileID: 5250266435802959109, guid: 672d5601eea0efc4685f9cf7c21cade3, type: 3}
+  explotable: 1
 --- !u!60 &171926846553334858
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -207,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8651313304624604590, guid: 50c4da92e18445448b3b8d69a810a60e, type: 3}
-  fireDelay: 0.5
+  fireDelay: 0.8
 --- !u!114 &8974772415526210467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe8f50b1663fb247ac18e20da19976d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 3.5
 --- !u!1 &1453929081962212433
 GameObject:
   m_ObjectHideFlags: 0
