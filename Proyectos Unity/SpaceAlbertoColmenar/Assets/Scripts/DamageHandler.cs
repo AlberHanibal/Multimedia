@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageHandler : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class DamageHandler : MonoBehaviour
     }
 
     void OnTriggerEnter2D()
-    {
+    {		
         health--;
         invulnTimer = invulnPeriod;
         gameObject.layer = 8; // invulnerable
